@@ -7,6 +7,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import main.java.com.example.notes.enums.EmailStatus;
 
 @Data
 @Table(name = "EMAIL")
@@ -24,6 +25,6 @@ public class Email implements Serializable {
     @Column(columnDefinition = "TEXT")
     private String text;
     private LocalDateTime sendDataEmail;
-    private StatusEmail statusEmail;
+    private EmailStatus statusEmail;
 
 }
