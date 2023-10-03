@@ -23,7 +23,7 @@ public class UserService {
     public User createUser(String username, String email, String password){
         User user = new User();
         if(userRepository.existsByEmail(email)){
-            throw new IllegalArgumentException("Nome de usuário já existe");
+            throw new IllegalArgumentException("O email já existe");
         }
         else{
             user.setEmail(email);
